@@ -26,6 +26,6 @@ app.use(webpackDevMiddleware(compiler,{
 
 app.use(webpackHotMiddleware(compiler));
 
-app.listen(7777,function(){
-    console.log('Listening at http://localhost:8888');
+app.listen(8080,function(){
+    console.log('Listening at http://localhost:8080');
 });
