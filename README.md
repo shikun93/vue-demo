@@ -79,11 +79,7 @@ webpack
 ```js
 let img = require('./img.png');
 ...
-render() {
-    return (
-        <img src={img} alt=""/>
-    );
-}
+    <img src={img} alt=""/>
 ```
 
 ## 其他
