@@ -1,0 +1,198 @@
+.login .header{
+	width:100%;
+	height: 82px;
+	line-height: 82px;
+	overflow: hidden;
+	background: #32ACD1;
+}
+.login .header .header_left{
+	float: left;
+	width: 200px;
+	padding-left: 20px;
+	img {
+		float: left;
+		margin-top: 18px;
+	}
+	h4 {
+		float: left;
+		font-size: 20px;
+		color: #fff;
+	}
+}
+.login .header .header_right{
+	overflow: hidden;
+	.ul {
+		height: 82px;
+		li {
+			width: 105px;
+			float: left;
+			line-height: 80px;
+			color: #fff;
+			cursor: pointer;
+			margin-left: 20px;
+			list-style: none;   
+		}
+		li:hover{
+			color:#EAEE15;
+		}
+		li>span {
+			padding: 10px 0;
+			padding-left: 35px;
+		}
+		li:nth-child(6) {
+			float: right;
+		}
+		li:nth-child(1)>span {
+			background: url("../images/tb.jpg") no-repeat left center;
+		}
+		li:nth-child(2)>span {
+			background: url("../images/tb.jpg") no-repeat -35px center;
+		}
+		li:nth-child(3)>span {
+			background: url("../images/tb.jpg") no-repeat -70px center;
+		}
+		li:nth-child(4)>span {
+			background: url("../images/tb.jpg") no-repeat -105px center;
+		}
+		li:nth-child(5)>span {
+			background: url("../images/tb.jpg") no-repeat -140px center;
+		}
+		li:nth-child(6)>span {
+			background: url("../images/tb.jpg") no-repeat -350px center;
+		}
+		li:nth-child(1):hover>span {
+			background: url("../images/tb.jpg") no-repeat -175px center;
+		}
+		li:nth-child(2):hover>span {
+			background: url("../images/tb.jpg") no-repeat -210px center;
+		}
+		li:nth-child(3):hover>span {
+			background: url("../images/tb.jpg") no-repeat -245px center;
+		}
+		li:nth-child(4):hover>span {
+			background: url("../images/tb.jpg") no-repeat -280px center;
+		}
+		li:nth-child(5):hover>span {
+			background: url("../images/tb.jpg") no-repeat -315px center;
+		}
+	}
+}
+.login .main {
+	width: 100%;
+	.aside {
+		width: 71px;
+		position: absolute;
+		top:82px;
+		left:0px;
+		right: 71px;
+		bottom: 0px;
+		background: #534A3B;
+		text-align: center;
+		.ul {
+			li {
+				width: 71px;
+				height: 61px;
+			}
+			li:nth-child(1) {
+				background: url("../images/tip.jpg") no-repeat;
+			}
+			li:nth-child(2) {
+				background: url("../images/tip.jpg") no-repeat 0px  -61px;
+			}
+			li:nth-child(3) {
+				background: url("../images/tip.jpg") no-repeat 0px  -122px;
+			}
+			li:nth-child(4) {
+				background: url("../images/tip.jpg") no-repeat 0px  -188px;
+			}
+			li:nth-child(5) {
+				background: url("../images/tip.jpg") no-repeat 0px  -260px;
+			}
+			li:nth-child(6) {
+				background: url("../images/tip.jpg") no-repeat 0px  -335px;
+			}
+			li:nth-child(7) {
+				background: url("../images/tip.jpg") no-repeat 0px  -410px;
+			}
+			li:nth-child(8) {
+				background: url("../images/tip.jpg") no-repeat 0px  -485px;
+			}
+		}
+		.but {
+			margin:10px 0;
+		}
+	}
+	.body {
+		position: absolute;
+		top:82px;
+		left:71px;
+		right: 0px;
+		bottom: 0px;
+		background: linear-gradient(80deg, #A2741F 20%,#AD8F53 50%, #BF965E 90%);
+		.body_main {
+			width: 600px;
+			margin: 0 auto;
+			margin-top: 50px;
+			.p {
+				font-size: 18px;
+				margin-left: -100px;
+				margin-bottom: 20px;
+				color: #fff;
+			}
+			.ul_main {
+				width: 600px;
+				height: 330px;
+				overflow: hidden;
+				.fade-enter{
+		            opacity: 0;
+		            transform: translate(50px);
+		        }
+		        .fade-enter-active{
+		            transition: all 1s;
+		        }
+		        .fade-leave-active{
+		            opacity: 0;
+		            transform: translate(-50px);
+		        }
+		        .fade-leave-active{
+		            transition: all 1s;
+		        }
+				.ul {
+					width: 600px;
+					.li {
+						width: 190px;
+						height: 100px;
+						margin: 5px;
+						float: left;
+						cursor: pointer;
+					}
+				}
+			}
+			
+		}  
+		.list_nav {
+			width: 100%;
+			height: 20px;
+			margin-top: 10px;
+			text-align: center;
+			span {
+				padding: 0 8px;
+				border-radius: 50%;
+				background: #A3ADAC;
+				margin-left:10px; 
+			}
+		}
+		.footer {
+			width: 100%;
+			height: 50px;
+			line-height: 50px;
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			text-align: center;
+			background: #534A3B;
+			opacity: 0.7;
+			color: #fff;
+		}
+	}
+}

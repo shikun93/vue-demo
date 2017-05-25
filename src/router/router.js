@@ -4,7 +4,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Hello from '../components/Hello';
-import App from '../App';
+import Login from '../pages/login';
 
 Vue.use(VueRouter);
 
@@ -12,10 +12,10 @@ const router = new VueRouter({
     routes:[
         {
             path:'/',
-            component:App,
+            component:Login,
             children:[
                 {
-                    path:'/hello',
+                    path:'/login',
                     component:Hello
                 }
             ]

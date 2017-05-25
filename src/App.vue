@@ -5,7 +5,8 @@
 </template>
 
 <script>
-require('./css/app');
+import './css/app';
+
 export default {
   name: 'app'
 }

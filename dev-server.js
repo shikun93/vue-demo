@@ -21,7 +21,7 @@ var compiler = webpack(config);
 //})
 
 app.use(webpackDevMiddleware(compiler,{
-    publicPatch:"/"
+    publicPatch:"./"
 }));
 
 app.use(webpackHotMiddleware(compiler));

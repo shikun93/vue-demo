@@ -1,17 +1,25 @@
-h1, h2 {
-  font-weight: normal;
-}
+ .but{
+            position: absolute;
+            top:200px;
+            left:200px;
+        }
+        .but1{
+            position: absolute;
+            top:20px;
+            left:20px;
+        }
+        .aa-enter{
+            opacity: 0;
+            transform: translate(50px);
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
+        }
+        .aa-enter-active{
+            transition: all 1s;
+        }
+        .aa-leave-active{
+            opacity: 0;
+            transform: translate(-50px);
+        }
+        .aa-leave-active{
+            transition: all 1s;
+        }

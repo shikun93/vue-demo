@@ -7,12 +7,11 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
-console.log(path.resolve(__dirname, './dist'));
 module.exports = {
     //入口文件
     entry:{
         index:"./src/main.js",
-        vendors:['vue','vuex','vue-router','axios']
+        vendors:['vue','vuex','vue-router','axios','lodash']
     },
     //输出文件
     output:{
@@ -21,7 +20,7 @@ module.exports = {
         publicPath:'./'       //导入图片有用
     },
     //开发模式
-    devtool:false,
+    devtool:"#eval-source-map", //eval-source-map source-map false
     //其他解决方案
     resolve:{
         extensions:['.js','.vue','.json','.less','.css'],
@@ -55,12 +54,27 @@ module.exports = {
                     use:[ "css-loader","postcss-loader","less-loader"]
                 })
             },
+             {
+                test:/.css$/,
+                use:ExtractTextPlugin.extract({
+                    fallback:"style-loader",
+                    use:[ "css-loader","postcss-loader"]
+                })
+            },
             {
                 test:/\.(png|jpe?g|gif|svg)$/,
                 loader:'url-loader',
                 options:{
                     limit:1000,
                    // name:'images/[name].[ext]'
+                }
+            },
+            {
+                test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 10000,
+                    //name: 'fonts/[name].[hash:7].[ext]'
                 }
             }
         ]
@@ -73,24 +87,24 @@ module.exports = {
         inline: true,//实时刷新
          hot: true,
        // port:"7000",
-       // noInfo:true
+       //noInfo:true
     },
     plugins:[
         //位于开发环境
         new webpack.DefinePlugin({
             'process.env': {
-                NODE_ENV: JSON.stringify('production')  //还一个值"production development" 生产环境
+                NODE_ENV: JSON.stringify('development')  //还一个值"production development" 生产环境
             }
         }),
 
         // 压缩js代码
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
-            },
-            // 排除关键字，不能混淆
-            except:['$','exports','require']
-        }),
+        //new webpack.optimize.UglifyJsPlugin({
+        //    compress: {
+        //        warnings: false
+        //    },
+        //    // 排除关键字，不能混淆
+        //    except:['$','exports','require']
+        //}),
 
         // 模块热替换插件
         new webpack.HotModuleReplacementPlugin(),
@@ -100,8 +114,8 @@ module.exports = {
 
         //提取公共文件单独打包
         new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendors',
-            filename: 'vendors.js',
+            names: "vendors",
+            minChunks: Infinity,
         }),
 
         // 自动生成html插件，如果创建多个HtmlWebpackPlugin的实例，就会生成多个页面
