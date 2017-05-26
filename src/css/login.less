@@ -41,6 +41,7 @@
 		}
 		li:nth-child(6) {
 			float: right;
+			margin-right: 20px;
 		}
 		li:nth-child(1)>span {
 			background: url("../images/tb.jpg") no-repeat left center;
@@ -131,12 +132,15 @@
 		background: linear-gradient(80deg, #A2741F 20%,#AD8F53 50%, #BF965E 90%);
 		.body_main {
 			width: 600px;
-			margin: 0 auto;
-			margin-top: 50px;
+			position: absolute;
+			top:50%;
+			left: 50%;
+			margin-left: -300px;
+			margin-top: -240px;
 			.p {
-				font-size: 18px;
+				font-size: 30px;
 				margin-left: -100px;
-				margin-bottom: 20px;
+				margin-bottom: 40px;
 				color: #fff;
 			}
 			.ul_main {
@@ -145,14 +149,14 @@
 				overflow: hidden;
 				.fade-enter{
 		            opacity: 0;
-		            transform: translate(50px);
+		            transform: translate(120px);
 		        }
 		        .fade-enter-active{
-		            transition: all 1s;
+		            transition: all 1.5s;
 		        }
 		        .fade-leave-active{
 		            opacity: 0;
-		            transform: translate(-50px);
+		            transform: translate(-120px);
 		        }
 		        .fade-leave-active{
 		            transition: all 1s;
@@ -165,6 +169,18 @@
 						margin: 5px;
 						float: left;
 						cursor: pointer;
+						opacity: 0.8;
+						h6 {
+							margin-left: 10px;
+							margin-top: 10px;
+							font-size: 16px;
+							color: #eee;
+						}
+						p {
+							text-indent:2rem;
+							font-size: 14px;
+							color: #eee;
+						}
 					}
 				}
 			}
@@ -180,6 +196,9 @@
 				border-radius: 50%;
 				background: #A3ADAC;
 				margin-left:10px; 
+			}
+			.active {
+				background: #fff;
 			}
 		}
 		.footer {

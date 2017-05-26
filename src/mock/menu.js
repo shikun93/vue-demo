@@ -4,19 +4,38 @@ let data = Mock.mock("http://aa.com/a.cn",{
 	"menus":{
 		"one|9":[
 			{
-				"title":"快捷菜单",
-	  			"description":"这里是快捷菜单",
+				"title":"@name",
+	  			"description":"@cparagraph(2)",
 	  			"background":"@color"
 			}
 		],
 		"two|1-9":[
 			{
-				"title":"快捷菜单",
-	  			"description":"这里是快捷菜单",
+				"title":"@name",
+	  			"description":"@cparagraph(2)",
 	  			"background":"@color"
 			}
 		]
 
 	}
-	
+});
+
+let people = Mock.mock("http://aa.com/b.cn",{
+	"menus":{
+		"one|9":[
+			{
+				"date":"@date",
+	  			"name":"@name",
+	  			"address":"@city"
+			}
+		],
+		"two|1-9":[
+			{
+				"date":"@date",
+	  			"name":"@name",
+	  			"address":"@city"
+			}
+		]
+
+	}
 });

@@ -4,11 +4,13 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import Login from './modules/login';
+import Qa from './modules/qa';
 
 Vue.use(Vuex);
 
 module.exports = new Vuex.Store({
 	modules:{
-		login:Login
+		login:Login,
+		qa:Qa
 	}
 }); 

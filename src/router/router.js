@@ -3,8 +3,9 @@
  */
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Hello from '../components/Hello';
+import Home from '../components/home';
 import Login from '../pages/login';
+import Qa from '../pages/qa';
 
 Vue.use(VueRouter);
 
@@ -15,8 +16,12 @@ const router = new VueRouter({
             component:Login,
             children:[
                 {
-                    path:'/login',
-                    component:Hello
+                    path:'home',
+                    component:Home
+                },
+                {
+                    path:'/qa',
+                    component:Qa
                 }
             ]
         }

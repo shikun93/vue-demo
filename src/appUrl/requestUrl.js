@@ -8,12 +8,11 @@ module.exports = {
 		axios.get("http://aa.com/a.cn").then(function(res){
 				cb(res.data.menus);
 		});
-		// axios.get("../../menu.json")
-		// .then(function(res){
-		// 	//cb(res.menu);
-		// }
-		// .catch(function (error) {
-  //   		console.log(error);
-  // 		})
+	},
+
+	getPeople:function(cb,val){
+		axios.post("http://aa.com/b.cn",{val:val}).then(function(res){
+				cb(res.data.menus);
+		});
 	}
 }

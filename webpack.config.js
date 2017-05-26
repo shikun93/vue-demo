@@ -20,7 +20,7 @@ module.exports = {
         publicPath:'./'       //导入图片有用
     },
     //开发模式
-    devtool:"#eval-source-map", //eval-source-map source-map false
+    devtool:false, //eval-source-map source-map false
     //其他解决方案
     resolve:{
         extensions:['.js','.vue','.json','.less','.css'],
@@ -93,7 +93,7 @@ module.exports = {
         //位于开发环境
         new webpack.DefinePlugin({
             'process.env': {
-                NODE_ENV: JSON.stringify('development')  //还一个值"production development" 生产环境
+                NODE_ENV: JSON.stringify('production')  //还一个值"production development" 生产环境
             }
         }),
 
